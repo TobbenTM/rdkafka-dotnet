@@ -38,6 +38,8 @@ namespace SimpleWebProducer
             services.AddApplicationInsightsTelemetry(Configuration);
 
             services.AddMvc();
+
+            services.AddSingleton<IProduceService, ProduceService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline
